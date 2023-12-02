@@ -12,7 +12,7 @@ const HostMobile = () => {
     },[])
     const hostMobileElle= mobile.map(phone=>(
         <Link 
-        to={`/mobile/${phone.id}`}
+        to={`../arnob/${phone.id}`}
         key={phone.id}
         className='host-van-link-wrapper'>
             <div className="host-van-single" key={phone.id}>

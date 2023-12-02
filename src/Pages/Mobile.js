@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link ,Navigate} from 'react-router-dom'
 // import './Css/Mobile.css'
 
 const Mobile = () => {
@@ -28,6 +28,7 @@ return (
         <div className="van-list">
             {vanElements}
         </div>
+       
     </div>
 )
 }
