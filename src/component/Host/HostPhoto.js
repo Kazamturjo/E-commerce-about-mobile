@@ -1,6 +1,5 @@
 import React from 'react'
-import { useOutletContext } from "react-router-dom"
-import Footer from "../Footer";
+import { useOutletContext,Link } from "react-router-dom"
 
 
 
@@ -9,9 +8,15 @@ const HostPhoto = () => {
   console.log(currentVan);
 
  const mobileElle= currentVan.images.map(phone=>(
-  
+  <div key={phone.id} className="van-tile">
+      {/* <Link to={`/mobile/${phone.id}`}> */}
 
-    <img src={phone} />
+           <img src={phone} />
+      {/* </Link> */}
+           
+  </div>
+
+
  
 
  ))
@@ -21,10 +26,13 @@ const HostPhoto = () => {
     <>
     
    
-    <div className='host-van-detail-image'>
+    <div className='van-list-container' >
+      <div className='host-van-detail-image'>
 
       {mobileElle}
-      <Footer/>
+      </div>
+
+    
     </div>
     </>
   )

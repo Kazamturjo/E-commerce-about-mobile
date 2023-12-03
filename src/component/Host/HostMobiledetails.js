@@ -11,7 +11,7 @@ const HostMobiledetails = () => {
     }
     const {id}=useParams()
     const [currentVan,setCurrentVan]=React.useState(null)
-    let navigate = useNavigate()
+    // let navigate = useNavigate()
 
     React.useEffect(()=>{
         fetch(`https://dummyjson.com/products/${id}`)
@@ -79,7 +79,6 @@ const HostMobiledetails = () => {
             </div>
            
             <Outlet context={{ currentVan }} />
-                        {/* <button onClick={()=>navigate('mobile')}>Click</button> */}
         </div>
        ) : <h1>Loading....</h1>} 
 
