@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link ,Navigate, useSearchParams} from 'react-router-dom'
+import { Link , useSearchParams} from 'react-router-dom'
 // import './Css/Mobile.css'
 
 const Mobile = () => {
   const [mobile,setMobile]=React.useState([])
-  const[searchParams,setSearchParams]=useSearchParams()
+  const[searchParams,setSearchParams]= useSearchParams()
 
  const typeFilter=searchParams.get('category')
 
@@ -26,7 +26,7 @@ const Mobile = () => {
 
   const vanElements = displayChar.map(van => (
     <div key={van.id} className="van-tile">
-        <Link to={`/mobile/${van.id}`} state={{ searchParams: searchParams }}>
+        <Link to={`/mobile/${van.id}`}>
             <img src={van.thumbnail} />
             <div className="van-info">
                 <h3>{van.title}</h3>

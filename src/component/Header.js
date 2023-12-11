@@ -26,6 +26,12 @@ const Header = () => {
         >
           Mobile
         </NavLink>
+        <NavLink
+          to="/login"
+          className={({ isActive }) => (isActive ? "NavLink" : null)}
+        >
+          Login
+        </NavLink>
       </nav>
     </header>
   );

@@ -15,6 +15,7 @@ import HostPricing from "./component/Host/HostPricing";
 import HostPhoto from "./component/Host/HostPhoto";
 import HostMobiledetails from "./component/Host/HostMobiledetails.js";
 import Footer from "./component/Footer.js";
+import Login from "./Pages/Login.js";
 
 
 
@@ -25,7 +26,11 @@ function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/mobile" element={<Mobile />} />
+          <Route path="/mobile" element={<Mobile />}  
+          loader={async()=>{
+            return null
+          }}/>
+          <Route path="/login" element={<Login />} />
           <Route path="/mobile/:id" element={<MobileDetails />} />
 
           <Route path="host" element={<HostLayout />}>

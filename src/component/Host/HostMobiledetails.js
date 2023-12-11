@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link, useParams ,NavLink, useNavigate, Outlet} from 'react-router-dom'
-import HostInfo from './HostInfo'
+import { Link, useParams ,NavLink, Outlet} from 'react-router-dom'
 
 const HostMobiledetails = () => {
     
